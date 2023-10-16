@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "diagramador",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "diagramadoruml-355fb": {
+      "hosting": {
+        "diagramador": [
+          "diagramadoruml-355fb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "diagramadoruml-355fb"
+  }
+}

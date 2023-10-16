@@ -1,0 +1,68 @@
+body {
+  display: flex;
+  align-items: center;
+  background-image: url(src/image/fond.jpg);
+  height: 98vh;
+}
+
+.login-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(234, 231, 176, 0.385);
+  width: 100%;
+  height: 75%;
+  text-align: center;
+  align-items: center;
+}
+
+.inicio {
+  display: block; /* Para que ocupe el ancho completo del contenedor */
+  text-align: center; /* Para centrar el texto */
+  font-weight: bold; /* Para hacer el texto en negrita */
+  font-size: 3em; /* Para hacer el texto más grande (ajusta el valor según sea necesario) */
+}
+
+input,
+button {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 4px;
+  border: #fff;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px;
+  width: 50%;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+label{
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+.navbar-brand{
+  font-weight: bold;
+  color: bisque;
+}
+
+i{
+  font-size: 8em;
+
+}
