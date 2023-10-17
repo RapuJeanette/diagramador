@@ -4,11 +4,11 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <button type="button" class="dropdown-item button" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+        <button type="button" class="dropdown-item button" data-bs-toggle="modal" data-bs-target="#exampleModal3"
+        (click)="exportDiagram('image')">
           Guardar Diagrama
         </button>
-        <button type="button" class="dropdown-item button" data-bs-toggle="modal" data-bs-target="#example2Modal"
-          (click)="cargarDiagrama()">
+        <button type="button" class="dropdown-item button" data-bs-toggle="modal" data-bs-target="#example2Modal">
           Cargar Diagramas
         </button>
       </ul>

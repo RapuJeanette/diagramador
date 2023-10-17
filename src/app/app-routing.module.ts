@@ -6,12 +6,9 @@ import { RegistrarComponent } from './registrar/registrar.component';
 
 const routes: Routes = [
   { path: 'diagram-editor', component: DiagramEditorComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '/registrar', pathMatch: 'full' },
   { path: 'registrar', component: RegistrarComponent },
-
-
 ];
 
 @NgModule({

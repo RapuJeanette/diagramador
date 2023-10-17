@@ -315,6 +315,7 @@ export class DiagramEditorComponent implements OnInit, AfterViewInit {
       fig4.add(new go.PathSegment(go.PathSegment.Line, .8 * w, .8 * h));
       return geo;
     });
+    
     go.Shape.defineFigureGenerator("Package", function (shape, w, h) {
       var geo = new go.Geometry();
       var fig = new go.PathFigure(0, 0.15 * h, true);

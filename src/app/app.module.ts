@@ -10,10 +10,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegistrarComponent } from './registrar/registrar.component';
-import { FirestoreModule } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import {environment} from 'environment';
-
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { FirestoreModule, provideFirestore,getFirestore} from '@angular/fire/firestore';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule, FIREBASE_OPTIONS } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -24,13 +28,19 @@ import {environment} from 'environment';
     RegistrarComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    AngularFireAuthModule.initializeApp(environment),
+    AngularFireModule.initializeApp(environment.firebase),
+    FirestoreModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore())
   ],
-  providers: [SocketService],
+  providers: [ SocketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
